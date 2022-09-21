@@ -1,0 +1,21 @@
+# Directories
+build/
+coverage/
+cjs/
+dist/
+dts/
+esm/
+lib/
+mjs/
+tmp/
+umd/
+node_modules/
+
+# Custom
+.env
+tests
+tsconfig.build.tsbuildinfo
+
+# Moon
+.moon/cache
+.moon/dts

@@ -1,0 +1,57 @@
+{
+  "name": "@realmsland/ws",
+  "version": "1.0.0",
+  "description": "realmsland ws interacting over the guilded websocket layer.",
+  "main": "./cjs/index.cjs",
+  "types": "./dts/index.d.ts",
+  "exports": {
+    "./package.json": "./package.json",
+    "./*": {
+      "types": "./dts/*.d.ts",
+      "node": {
+        "require": "./cjs/*.cjs"
+      }
+    },
+    ".": {
+      "types": "./dts/index.d.ts",
+      "node": {
+        "import": "./cjs/index-wrapper.mjs",
+        "require": "./cjs/index.cjs"
+      }
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oasisjs/realmsland.git"
+  },
+  "keywords": [
+    "ws"
+  ],
+  "author": "Miia Egnisa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/oasisjs/realmsland/issues"
+  },
+  "homepage": "https://github.com/oasisjs/realmsland",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.5.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "packemon": {
+    "format": "cjs",
+    "platform": "node",
+    "support": "experimental"
+  },
+  "type": "commonjs",
+  "files": [
+    "cjs/**/*.{cjs,mjs,map}",
+    "dts/**/*.d.ts",
+    "src/**/*.{ts,tsx,json}"
+  ],
+  "dependencies": {
+    "@realmsland/api-references": "workspace:^"
+  }
+}

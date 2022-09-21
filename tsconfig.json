@@ -1,0 +1,18 @@
+{
+  "extends": "./tsconfig.options.json",
+  "files": [],
+  "references": [
+    {
+      "path": "packages/api-references"
+    },
+    {
+      "path": "packages/core"
+    },
+    {
+      "path": "packages/rest"
+    },
+    {
+      "path": "packages/ws"
+    }
+  ]
+}

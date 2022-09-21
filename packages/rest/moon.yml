@@ -1,0 +1,9 @@
+type: 'library'
+
+tasks:
+  build:
+    outputs:
+      - 'cjs'
+
+dependsOn:
+  - 'api-references'

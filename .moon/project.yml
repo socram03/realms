@@ -1,0 +1,56 @@
+$schema: 'https://moonrepo.dev/schemas/global-project.json'
+
+fileGroups:
+  configs:
+    - '*.{js,json}'
+
+  sources:
+    - 'src/**/*'
+    - 'types/**/*'
+
+  tests:
+    - 'tests/**/*.test.*'
+    - '**/__tests__/**/*'
+
+  assets:
+    - 'assets/**/*'
+    - 'images/**/*'
+    - 'static/**/*'
+    - '**/*.{scss,css}'
+    - '**/*.mdx'
+
+tasks:
+  # https://moonrepo.dev/docs/guides/examples/packemon
+  watch:
+    command:
+      - 'packemon'
+      - 'watch'
+    env:
+      NODE_ENV: 'development'
+
+  # https://moonrepo.dev/docs/guides/examples/packemon
+  build:
+    command:
+      - 'packemon'
+      - 'pack'
+      - '--addEngines'
+      - '--addExports'
+      - '--declaration'
+      - '--declarationConfig'
+      - 'tsconfig.build.json'
+    inputs:
+      - '@globs(sources)'
+      - 'package.json'
+      - 'tsconfig.build.json'
+    outputs:
+      - 'dts'
+    env:
+      NODE_ENV: 'production'
+
+  # https://moonrepo.dev/docs/guides/examples/packemon
+  clean:
+    command:
+      - 'packemon'
+      - 'clean'
+    env:
+      NODE_ENV: 'development'
