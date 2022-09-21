@@ -7,7 +7,7 @@ projects:
   ws: 'packages/ws'
 
 node:
-  version: '18.5.0'
+  version: '18.9.0'
   packageManager: 'npm'
   addEnginesConstraint: true
   aliasPackageNames: 'name-only'

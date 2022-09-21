@@ -1,0 +1,14 @@
+type: 'library'
+
+tasks:
+  build:
+    outputs:
+      - 'cjs'
+
+dependsOn:
+  - id: 'api-references'
+    scope: 'peer'
+  - id: 'core'
+    scope: 'peer'
+  - id: 'ws'
+    scope: 'peer'

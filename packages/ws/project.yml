@@ -6,4 +6,5 @@ tasks:
       - 'cjs'
 
 dependsOn:
-  - 'api-references'
+  - id: 'api-references'
+    scope: 'peer'
