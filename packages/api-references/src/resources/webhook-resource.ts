@@ -17,3 +17,49 @@ export interface GuildedWebhook {
     /** The token of the webhook */
     token?: string;
 }
+
+/** @link https://www.guilded.gg/docs/api/webhook/WebhookCreate */
+export interface GuildedWebhookCreate {
+    /** The ID of the server */
+    serverId: string;
+    /** The name of the webhook (min length 1; max length 128) */
+    name: string; 
+    /** Channel ID to create the webhook in */
+    channelId: string;
+}
+
+/** @link https://www.guilded.gg/docs/api/webhook/WebhookReadMany */
+export interface GuildedWebhookReadMany {
+    /** The ID of the server */
+    serverId: string;
+    /** ID of the channel you want to filter for webhooks */
+    channelId: string;
+}
+
+/** @link https://www.guilded.gg/docs/api/webhook/WebhookRead */
+export interface GuildedWebhookRead {
+    /** The ID of the server */
+    serverId: string;
+    /** The ID of the webhook */
+    webhookId: string;
+}
+
+/** @link https://www.guilded.gg/docs/api/webhook/WebhookUpdate */
+export interface GuildedWebhookUpdate {
+    /** The ID of the server */
+    serverId: string;
+    /** The ID of the webhook */
+    webhookId: string;
+    /** The name of the webhook (min length 1; max length 128) */
+    name: string; 
+    /** The ID of the channel */
+    channelId?: string;
+ }
+
+/** @link https://www.guilded.gg/docs/api/webhook/WebhookDelete */
+export interface GuildedWebhookDelete {
+    /** The ID of the server */
+    serverId: string;
+    /** The ID of the webhook */
+    webhookId: string;
+}
