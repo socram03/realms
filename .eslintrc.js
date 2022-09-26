@@ -22,6 +22,8 @@ module.exports = {
 
 		// We need to keep "index" around in imports for extensions
 		'import/no-useless-path-segments': 'off',
+		// inconsistent rule
+		'@typescript-eslint/prefer-literal-enum-member': 'off',
 	},
 	overrides: [
 		{
