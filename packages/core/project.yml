@@ -7,8 +7,8 @@ tasks:
 
 dependsOn:
   - id: 'api-references'
-    scope: 'peer'
+    scope: 'production'
   - id: 'core'
-    scope: 'peer'
+    scope: 'production'
   - id: 'ws'
-    scope: 'peer'
+    scope: 'production'

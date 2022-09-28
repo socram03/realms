@@ -6,6 +6,12 @@
   "references": [
     {
       "path": "../api-references"
+    },
+    {
+      "path": "../rest"
+    },
+    {
+      "path": "../ws"
     }
   ]
 }

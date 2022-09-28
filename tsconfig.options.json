@@ -1,12 +1,12 @@
 {
-	"extends": "tsconfig-moon/tsconfig.json",
-	"compilerOptions": {
-	  "composite": true,
-	  "declaration": true,
-	  "declarationMap": true,
-	  "emitDeclarationOnly": true,
-	  "noEmitOnError": false,
-	  "moduleResolution": "NodeNext",
-	  "target": "ESNext"
-	}
+  "extends": "tsconfig-moon/tsconfig.json",
+  "compilerOptions": {
+    "composite": true,
+    "declaration": true,
+    "declarationMap": true,
+    "emitDeclarationOnly": true,
+    "noEmitOnError": false,
+    "moduleResolution": "NodeNext",
+    "target": "ESNext"
+  }
 }

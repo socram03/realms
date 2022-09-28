@@ -50,5 +50,8 @@
     "cjs/**/*.{cjs,mjs,map}",
     "dts/**/*.d.ts",
     "src/**/*.{ts,tsx,json}"
-  ]
+  ],
+  "peerDependencies": {
+    "@realmsland/api-references": "^1.0.0"
+  }
 }

@@ -14,6 +14,8 @@ node_modules/
 # Custom
 .env
 tests
+
+# Info
 tsconfig.build.tsbuildinfo
 
 # Moon

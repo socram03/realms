@@ -50,5 +50,10 @@
     "cjs/**/*.{cjs,mjs,map}",
     "dts/**/*.d.ts",
     "src/**/*.{ts,tsx,json}"
-  ]
+  ],
+  "dependencies": {
+    "@realmsland/api-references": "^1.0.0",
+    "@realmsland/rest": "^1.0.0",
+    "@realmsland/ws": "^1.0.0"
+  }
 }
