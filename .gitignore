@@ -17,4 +17,6 @@ tests
 
 # Turbo
 .turbo/
+
+# Npm
 package-lock.json
