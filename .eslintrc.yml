@@ -15,4 +15,3 @@ overrides:
       'unicorn/prefer-module': 'off'
       'import/no-commonjs': 'off'
       'sort-keys': 'off'
-		  
