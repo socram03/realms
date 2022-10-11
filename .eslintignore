@@ -1,4 +1,5 @@
 .cache/
+.turbo/
 node_modules/
 build/
 cjs/

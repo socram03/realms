@@ -2,22 +2,26 @@
   "name": "@realmsland/ws",
   "version": "1.0.0",
   "description": "realmsland ws interacting over the guilded websocket layer.",
-  "main": "./cjs/index.cjs",
+  "scripts": {
+    "validate": "packemon validate",
+    "build": "packemon build --addEngines --addExports --declaration --declarationConfig tsconfig.build.json",
+    "watch": "packemon watch",
+    "clean": "packemon clean",
+    "pack": "packemon pack --addEngines --addExports --declaration --declarationConfig tsconfig.build.json"
+  },
+  "main": "./lib/index.js",
   "types": "./dts/index.d.ts",
   "exports": {
     "./package.json": "./package.json",
     "./*": {
       "types": "./dts/*.d.ts",
-      "node": {
-        "require": "./cjs/*.cjs"
-      }
+      "node": "./lib/*.js",
+      "default": "./lib/*.js"
     },
     ".": {
       "types": "./dts/index.d.ts",
-      "node": {
-        "import": "./cjs/index-wrapper.mjs",
-        "require": "./cjs/index.cjs"
-      }
+      "node": "./lib/index.js",
+      "default": "./lib/index.js"
     }
   },
   "repository": {
@@ -41,23 +45,24 @@
     "access": "public"
   },
   "packemon": {
-    "format": "cjs",
+    "inputs": {
+      "index": "src/index.ts"
+    },
+    "format": "lib",
     "platform": "node",
     "support": "experimental"
   },
-  "type": "commonjs",
   "files": [
     "cjs/**/*.{cjs,mjs,map}",
     "dts/**/*.d.ts",
+    "lib/**/*.{js,map}",
     "src/**/*.{ts,tsx,json}"
   ],
   "dependencies": {
-    "ws": "^8.8.1"
+    "@realmsland/api-references": "^1.0.0",
+    "ws": "^8.9.0"
   },
   "devDependencies": {
     "@types/ws": "^8.5.3"
-  },
-  "peerDependencies": {
-    "@realmsland/api-references": "^1.0.0"
   }
 }

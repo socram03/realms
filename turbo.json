@@ -1,0 +1,47 @@
+{
+  "$schema": "https://turborepo.org/schema.json",
+  "pipeline": {
+    "@realmsland/api-references#build": {
+      "outputs": [
+        "dts/**",
+        "lib/**"
+      ],
+      "dependsOn": []
+    },
+    "@realmsland/ws#build": {
+      "outputs": [
+        "dts/**",
+        "lib/**"
+      ],
+      "dependsOn": [
+        "@realmsland/api-references#build"
+      ]
+    },
+    "@realmsland/rest#build": {
+      "outputs": [
+        "dts/**",
+        "lib/**"
+      ],
+      "dependsOn": [
+        "@realmsland/api-references#build"
+      ]
+    },
+    "@realmsland/core#build": {
+      "outputs": [
+        "dts/**",
+        "lib/**"
+      ],
+      "dependsOn": [
+        "@realmsland/api-references#build",
+        "@realmsland/rest#build",
+        "@realmsland/ws#build"
+      ]
+    },
+    "watch": {
+      "cache": false
+    },
+    "clean": {
+      "cache": false
+    }
+  }
+}

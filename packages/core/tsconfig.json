@@ -1,17 +1,6 @@
 {
   "extends": "../../tsconfig.options.json",
   "include": [
-    "**/*"
-  ],
-  "references": [
-    {
-      "path": "../api-references"
-    },
-    {
-      "path": "../rest"
-    },
-    {
-      "path": "../ws"
-    }
+    "src/**/*"
   ]
 }
