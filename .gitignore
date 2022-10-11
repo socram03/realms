@@ -17,3 +17,4 @@ tests
 
 # Turbo
 .turbo/
+package-lock.json
